@@ -6,6 +6,11 @@ Use [tart](https://tart.run) to create a MacOS virtual machine.
 tart clone ghcr.io/cirruslabs/macos-sonoma-vanilla:latest nix-darwin
 tart set nix-darwin --disk-size 100
 tart run nix-darwin
+```
+
+ssh into dev machine
+
+```sh
 ssh admin@$(tart ip nix-darwin) # will need a new terminal
 ```
 
@@ -30,14 +35,28 @@ Install nix
 sh <(curl -L https://releases.nixos.org/nix/nix-2.24.8/install) --daemon
 ```
 
-Bootstrap
+open a dev shell
 
 ```sh
-nix run --extra-experimental-features 'nix-command flakes' nix-darwin -- switch --flake /Volumes/nix-darwin/#yellow4
+# cd to flake location
+cd /Volumes/nix-darwin
+nix develop --extra-experimental-features 'nix-command flakes'
 ```
 
-Update flake
+```sh
+just repl
+```
+
+bootstrap
 
 ```sh
-darwin-rebuild switch --flake /Volumes/nix-darwin
+just init yellow4 # hostname
+```
+
+# Update system
+
+Rebuild flake
+
+```sh
+just rebuild
 ```

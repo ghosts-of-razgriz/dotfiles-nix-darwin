@@ -34,40 +34,18 @@
       };
     in
     {
-      # overlays
-      overlays = import ./overlays { inherit inputs outputs; };
-
-      # Custom packages to be shared or upstreamed.
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = nixpkgs.pkgs.${system};
-        in
-        import ./pkgs { inherit pkgs; }
-      );
-
-      checks = forAllSystems (
-        system:
-        let
-          pkgs = nixpkgs.pkgs.${system};
-        in
-        import ./checks { inherit inputs system pkgs; }
-      );
-
       devShells = forAllSystems (
         system:
         let
-          pkgs = nixpkgs.pkgs.${system};
-          checks = self.checks.${system};
+          pkgs = nixpkgs.legacyPackages.${system};
         in
-        import ./shell.nix { inherit checks pkgs; }
+        import ./shell.nix { inherit pkgs; }
       );
 
       darwinConfigurations = {
         yellow4 = lib.darwinSystem {
           inherit specialArgs;
           modules = [
-            # home-manager
             ./hosts/yellow4
           ];
         };

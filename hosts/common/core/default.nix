@@ -1,9 +1,8 @@
-{ nixpkgs, pkgs, ... }:
+{ config, pkgs, ... }:
 {
+  nixpkgs.hostPlatform = "aarch64-darwin";
   nix.settings.experimental-features = "nix-command flakes";
   services.nix-daemon.enable = true;
-  system.stateVersion = 5;
-  nixpkgs.hostPlatform = "aarch64-darwin";
 
   programs.fish.enable = true;
   programs.zsh.enable = true;
@@ -15,5 +14,15 @@
       zsh
       fish
     ];
+    loginShell = pkgs.zsh;
+
+    systemPackages = with pkgs; [
+      nix
+      git
+      just
+    ];
   };
+
+  system.configurationRevision = config.rev or config.dirtyRev or null;
+  system.stateVersion = 5;
 }
