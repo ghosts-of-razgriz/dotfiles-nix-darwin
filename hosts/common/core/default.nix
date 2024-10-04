@@ -15,14 +15,12 @@
       fish
     ];
     loginShell = pkgs.zsh;
-
-    systemPackages = with pkgs; [
-      nix
-      git
-      just
-    ];
   };
 
   system.configurationRevision = config.rev or config.dirtyRev or null;
   system.stateVersion = 5;
+
+  imports = [
+    ./package.nix
+  ];
 }
