@@ -22,5 +22,8 @@
 
   imports = [
     ./package.nix
+    ./general.nix
+    ./dock.nix
+    ./finder.nix
   ];
 }

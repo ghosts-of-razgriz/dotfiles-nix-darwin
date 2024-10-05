@@ -27,13 +27,15 @@
         inherit
           inputs
           outputs
-          configVars
           configLib
           nixpkgs
           ;
       };
     in
     {
+
+      overlays = import ./overlays { inherit inputs outputs; };
+
       devShells = forAllSystems (
         system:
         let
@@ -44,9 +46,13 @@
 
       darwinConfigurations = {
         yellow4 = lib.darwinSystem {
-          inherit specialArgs;
+          specialArgs = specialArgs // {
+            configVars = configVars.yellow4;
+          };
           modules = [
             ./hosts/yellow4
+
+            ./overlays
           ];
         };
       };
