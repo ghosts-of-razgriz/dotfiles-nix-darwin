@@ -7,8 +7,11 @@ rebuild-pre:
 rebuild: rebuild-pre
 	darwin-rebuild switch --flake .
 
-init host: rebuild-pre
+init host: brew-install rebuild-pre
 	nix run --extra-experimental-features 'nix-command flakes' nix-darwin -- switch --flake /Volumes/nix-darwin/#{{host}}
 
 repl:
 	nix develop --extra-experimental-features 'nix-command flakes'
+
+brew-install:
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
