@@ -20,10 +20,13 @@
   system.configurationRevision = config.rev or config.dirtyRev or null;
   system.stateVersion = 5;
 
+  brew-nix.enable = true;
+
   imports = [
     ./package.nix
     ./general.nix
     ./dock.nix
     ./finder.nix
+    ./apps.nix
   ];
 }

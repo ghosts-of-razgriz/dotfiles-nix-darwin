@@ -9,6 +9,16 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    brew-api.url = "github:BatteredBunny/brew-api";
+    brew-api.flake = false;
+
+    brew-nix = {
+      url = "github:BatteredBunny/brew-nix";
+      inputs.brew-api.follows = "brew-api";
+      inputs.nix-darwin.follows = "nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -17,6 +27,7 @@
       nixpkgs,
       nix-darwin,
       home-manager,
+      brew-nix,
       ...
     }@inputs:
     let
@@ -33,6 +44,7 @@
           outputs
           configLib
           home-manager
+          brew-nix
           nixpkgs
           ;
       };
@@ -55,6 +67,7 @@
             configVars = configVars.yellow4;
           };
           modules = [
+            brew-nix.darwinModules.default
             ./hosts/yellow4
             ./home
 
