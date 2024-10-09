@@ -3,7 +3,7 @@
 Use [tart](https://tart.run) to create a MacOS virtual machine.
 
 ```sh
-tart clone ghcr.io/cirruslabs/macos-sonoma-vanilla:latest nix-darwin
+tart clone ghcr.io/cirruslabs/macos-sequoia-vanilla:latest nix-darwin
 tart set nix-darwin --disk-size 100
 tart run nix-darwin
 ```
@@ -38,6 +38,8 @@ sh <(curl -L https://releases.nixos.org/nix/nix-2.24.8/install) --daemon
 open a dev shell
 
 ```sh
+# may not work
+open 'smb://user:password@192.168.64.1/nix-darwin'
 # cd to flake location
 cd /Volumes/nix-darwin
 nix develop --extra-experimental-features 'nix-command flakes'

@@ -6,6 +6,9 @@
 
     nix-darwin.url = "github:lnl7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -13,6 +16,7 @@
       self,
       nixpkgs,
       nix-darwin,
+      home-manager,
       ...
     }@inputs:
     let
@@ -28,6 +32,7 @@
           inputs
           outputs
           configLib
+          home-manager
           nixpkgs
           ;
       };
@@ -51,6 +56,7 @@
           };
           modules = [
             ./hosts/yellow4
+            ./home
 
             ./overlays
           ];
