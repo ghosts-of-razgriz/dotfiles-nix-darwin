@@ -28,5 +28,21 @@ in
     numi
     raycast
     vscodium
+    rapidapi
+    expressions
+    morgen
   ];
+
+  homebrew = {
+    enable = true;
+
+    casks = [
+      "alfred"
+      "dash@6"
+    ];
+
+    # masApps = {
+    #   Amphetamine = 937984704;
+    # };
+  };
 }

@@ -14,5 +14,6 @@
     (map configLib.relativeToRoot [
       "hosts/common/core"
     ])
+    ./apps.nix
   ];
 }
