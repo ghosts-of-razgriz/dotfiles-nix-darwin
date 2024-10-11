@@ -26,6 +26,7 @@
             ./amethyst.nix
             (import ./fish.nix { inherit pkgs configVars; })
             (import ./ssh.nix { inherit configVars; })
+            ./ripgrep.nix
             ./starship.nix
             ./tmux.nix
           ];
