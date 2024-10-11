@@ -55,6 +55,10 @@ bootstrap
 just init yellow4 # hostname
 ```
 
+## Post Bootstrap
+
+After bootstrapping, the system should be 90% ready. There are some [Manual Steps](./manual-steps.md) and need to be completed, which are not scriptable.
+
 # Update system
 
 Rebuild flake

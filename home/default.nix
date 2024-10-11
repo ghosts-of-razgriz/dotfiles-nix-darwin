@@ -1,4 +1,9 @@
-{ home-manager, configVars, ... }:
+{
+  home-manager,
+  configVars,
+  pkgs,
+  ...
+}:
 {
   users.users."${configVars.username}" = {
     name = configVars.username;
@@ -19,8 +24,9 @@
           programs.home-manager.enable = true;
           imports = [
             ./amethyst.nix
-            ./fish.nix
+            (import ./fish.nix { inherit pkgs configVars; })
             (import ./ssh.nix { inherit configVars; })
+            ./starship.nix
             ./tmux.nix
           ];
         };

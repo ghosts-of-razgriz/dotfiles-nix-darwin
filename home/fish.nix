@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, configVars, ... }:
 let
   catppuccin = pkgs.fetchFromGitHub {
     owner = "catppuccin";
@@ -18,12 +18,13 @@ in
       set --export EDITOR nvim
       set --export VISUAL nvim
 
-      # source ~/.config/fish/(hostname | tr [:upper:] [:lower:]).fish
-
       fish_config theme choose 'Catppuccin Mocha'
 
       # brew
       eval (/opt/homebrew/bin/brew shellenv)
+
+      # shell prompt
+      starship init fish | source
 
       # programming languages
       ## Golang
@@ -31,6 +32,11 @@ in
     '';
     shellAliases = {
       ssh = "TERM=xterm-256color command ssh";
+      qif-clean = "fd -e qif --exec sed i- '' 's/^M.*/M/' {}";
+      qif-rm = "fd -e qif --exec rm -f {}";
+    };
+    shellAbbrs = {
+      l = "eza";
     };
     plugins = [
       {
@@ -59,5 +65,9 @@ in
 
   xdg.configFile."fish/conf.d/keybinding.fish" = {
     source = ../dotfiles/fish/conf.d/keybinding.fish;
+  };
+
+  xdg.configFile."fish/conf.d/${configVars.hostname}.fish" = {
+    source = ../dotfiles/fish/conf.d/${configVars.hostname}.fish;
   };
 }

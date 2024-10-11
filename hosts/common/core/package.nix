@@ -6,6 +6,7 @@
     just
 
     bat
+    eza
     fd
     fzf
     jq
