@@ -19,8 +19,9 @@
           programs.home-manager.enable = true;
 
           imports = [
-            ./fish.nix
             ./amethyst.nix
+            ./fish.nix
+            ./tmux.nix
           ];
         };
       };
