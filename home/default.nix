@@ -17,10 +17,10 @@
           home.stateVersion = "24.11";
 
           programs.home-manager.enable = true;
-
           imports = [
             ./amethyst.nix
             ./fish.nix
+            (import ./ssh.nix { inherit configVars; })
             ./tmux.nix
           ];
         };
