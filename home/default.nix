@@ -20,6 +20,7 @@
 
           imports = [
             ./fish.nix
+            ./amethyst.nix
           ];
         };
       };

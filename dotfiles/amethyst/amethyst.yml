@@ -1,0 +1,129 @@
+layouts:
+  - tall
+  - fullscreen
+  - bsp
+  - floating
+  - tall-right
+
+mod1:
+  - control
+  - option
+
+mod2:
+  - control
+  - option
+  - shift
+
+cycle-layout:
+  mod: mod1
+  key: "]"
+cycle-layout-backward:
+  mod: mod1
+  key: "["
+
+shrink-main:
+  mod: mod1
+  key: left
+expand-main:
+  mod: mod1
+  key: right
+
+increase-main:
+  mod: mod1
+  key: up
+decrease-main:
+  mod: mod1
+  key: down
+
+focus-ccw:
+  mod: mod1
+  key: j
+
+focus-cw:
+  mod: mod1
+  key: k
+
+focus-screen-cw:
+  mod: mod1
+  key: ","
+
+swap-screen-cw:
+  mod: mod1
+  key: "."
+
+swap-main:
+  mod: mod1
+  key: enter
+
+toggle-float:
+  mod: mod1
+  key: f
+
+select-tall-layout:
+  mod: mod1
+  key: "1"
+
+select-fullscreen-layout:
+  mod: mod1
+  key: "2"
+
+select-bsp-layout:
+  mod: mod1
+  key: "3"
+
+select-floating-layout:
+  mod: mod1
+  key: "4"
+
+select-tall-right-layout:
+  mod: mod1
+  key: "5"
+
+toggle-tiling:
+  mod: mod2
+  key: t
+
+focus-screen-1:
+  key: ""
+throw-screen-1:
+  key: ""
+
+focus-screen-2:
+  key: ""
+throw-screen-2:
+  key: ""
+
+focus-screen-3:
+  key: ""
+throw-screen-3:
+  key: ""
+
+focus-screen-4:
+  key: ""
+throw-screen-4:
+  key: ""
+
+reevaluate-windows:
+  mod: mod1
+  key: r
+
+relaunch-amethyst:
+  mod: mod2
+  key: r
+
+floating:
+  - "com.todesktop.210203cqcj00tw1"
+  - "com.loom.desktop"
+  - "com.kapeli.dash-setapp"
+  - "com.apple.systempreferences"
+  - "com.1password.1password"
+  - "org.coscreen.CoScreen"
+  - "net.xmind.vana.app"
+
+mouse-swaps-windows: true
+mouse-resizes-windows: true
+focus-follows-mouse: false
+mouse-follows-focus: true
+
+window-margins: true
+window-margin-size: 20
