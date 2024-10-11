@@ -37,7 +37,7 @@
         "aarch64-darwin"
       ];
       configVars = import ./vars { inherit inputs lib; };
-      configLib = import ./lib { nixpkgs = nixpkgs; };
+      configLib = import ./lib { inherit nixpkgs; };
       specialArgs = {
         inherit
           inputs

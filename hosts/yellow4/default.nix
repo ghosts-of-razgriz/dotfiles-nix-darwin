@@ -13,7 +13,7 @@
   imports = nixpkgs.lib.flatten [
     (map configLib.relativeToRoot [
       "hosts/common/core"
+      "hosts/yellow4/apps.nix"
     ])
-    ./apps.nix
   ];
 }

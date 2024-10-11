@@ -23,14 +23,14 @@ in
 
   environment.systemPackages = with pkgs.brewCasks; [
     amethyst
+    expressions
     jordanbaird-ice
     maccy
+    morgen
     numi
+    rapidapi
     raycast
     vscodium
-    rapidapi
-    expressions
-    morgen
   ];
 
   homebrew = {
