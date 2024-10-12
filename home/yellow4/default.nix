@@ -40,6 +40,7 @@ in
                 "home/common/ssh.nix"
                 "home/common/starship.nix"
                 "home/common/tmux.nix"
+                "home/common/wezterm.nix"
               ]
             ))
           ];

@@ -16,5 +16,7 @@
     starship
     tmux
     tree-sitter
+
+    wezterm
   ];
 }
