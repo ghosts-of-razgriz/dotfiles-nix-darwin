@@ -74,6 +74,18 @@
             ./overlays
           ];
         };
+        yellow13 = lib.darwinSystem {
+          specialArgs = specialArgs // {
+            configVars = configVars.yellow13;
+          };
+          modules = [
+            brew-nix.darwinModules.default
+            ./hosts/yellow13
+            ./home/yellow13
+
+            ./overlays
+          ];
+        };
       };
     };
 }

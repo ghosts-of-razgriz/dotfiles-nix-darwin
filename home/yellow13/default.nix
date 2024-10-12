@@ -33,9 +33,8 @@ in
               map configLib.relativeToRoot [
                 "home/common/amethyst.nix"
                 "home/common/fish.nix"
-                "home/yellow4/fish.nix"
                 "home/common/git.nix"
-                "home/yellow4/git.nix"
+                "home/yellow13/git.nix"
                 "home/common/raycast.nix"
                 "home/common/ripgrep.nix"
                 "home/common/ssh.nix"

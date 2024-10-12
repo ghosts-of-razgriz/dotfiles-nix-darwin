@@ -36,8 +36,6 @@ in
     '';
     shellAliases = {
       ssh = "TERM=xterm-256color command ssh";
-      qif-clean = "fd -e qif --exec sed i- '' 's/^M.*/M/' {}";
-      qif-rm = "fd -e qif --exec rm -f {}";
     };
     shellAbbrs = {
       l = "eza";
