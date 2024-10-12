@@ -4,8 +4,12 @@
   configLib,
   nixpkgs,
   pkgs,
+  lib,
   ...
 }:
+let
+  importWithVars = path: import path { inherit lib pkgs configVars; };
+in
 {
   users.users."${configVars.username}" = {
     name = configVars.username;
@@ -25,16 +29,18 @@
 
           programs.home-manager.enable = true;
           imports = nixpkgs.lib.flatten [
-            (map configLib.relativeToRoot [
-              "home/common/amethyst.nix"
-              "home/common/git.nix"
-              "home/yellow4/git.nix"
-              "home/common/ripgrep.nix"
-              "home/common/starship.nix"
-              "home/common/tmux.nix"
-            ])
-            (import ../common/fish.nix { inherit pkgs configVars; })
-            (import ../common/ssh.nix { inherit configVars; })
+            (map importWithVars (
+              map configLib.relativeToRoot [
+                "home/common/amethyst.nix"
+                "home/common/fish.nix"
+                "home/common/git.nix"
+                "home/yellow4/git.nix"
+                "home/common/ripgrep.nix"
+                "home/common/ssh.nix"
+                "home/common/starship.nix"
+                "home/common/tmux.nix"
+              ]
+            ))
           ];
         };
       };
