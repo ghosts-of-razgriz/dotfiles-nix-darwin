@@ -11,6 +11,6 @@
   };
 
   home.file.".ssh/${configVars.hostname}.config" = {
-    source = ../dotfiles/ssh/${configVars.hostname}.config;
+    source = ../../dotfiles/ssh/${configVars.hostname}.config;
   };
 }

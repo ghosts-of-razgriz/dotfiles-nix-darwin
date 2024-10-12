@@ -69,7 +69,7 @@
           modules = [
             brew-nix.darwinModules.default
             ./hosts/yellow4
-            ./home
+            ./home/yellow4
 
             ./overlays
           ];

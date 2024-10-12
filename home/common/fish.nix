@@ -1,4 +1,8 @@
-{ pkgs, configVars, ... }:
+{
+  pkgs,
+  configVars,
+  ...
+}:
 let
   catppuccin = pkgs.fetchFromGitHub {
     owner = "catppuccin";
@@ -56,18 +60,18 @@ in
   };
 
   xdg.configFile."fish/conf.d/fzf.fish" = {
-    source = ../dotfiles/fish/conf.d/fzf.fish;
+    source = ../../dotfiles/fish/conf.d/fzf.fish;
   };
 
   xdg.configFile."fish/conf.d/fzf_tmux.fish" = {
-    source = ../dotfiles/fish/conf.d/fzf_tmux.fish;
+    source = ../../dotfiles/fish/conf.d/fzf_tmux.fish;
   };
 
   xdg.configFile."fish/conf.d/keybinding.fish" = {
-    source = ../dotfiles/fish/conf.d/keybinding.fish;
+    source = ../../dotfiles/fish/conf.d/keybinding.fish;
   };
 
   xdg.configFile."fish/conf.d/${configVars.hostname}.fish" = {
-    source = ../dotfiles/fish/conf.d/${configVars.hostname}.fish;
+    source = ../../dotfiles/fish/conf.d/${configVars.hostname}.fish;
   };
 }

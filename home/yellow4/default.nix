@@ -1,6 +1,8 @@
 {
   home-manager,
   configVars,
+  configLib,
+  nixpkgs,
   pkgs,
   ...
 }:
@@ -22,13 +24,17 @@
           home.stateVersion = "24.11";
 
           programs.home-manager.enable = true;
-          imports = [
-            ./amethyst.nix
-            (import ./fish.nix { inherit pkgs configVars; })
-            (import ./ssh.nix { inherit configVars; })
-            ./ripgrep.nix
-            ./starship.nix
-            ./tmux.nix
+          imports = nixpkgs.lib.flatten [
+            (map configLib.relativeToRoot [
+              "home/common/amethyst.nix"
+              "home/common/git.nix"
+              "home/yellow4/git.nix"
+              "home/common/ripgrep.nix"
+              "home/common/starship.nix"
+              "home/common/tmux.nix"
+            ])
+            (import ../common/fish.nix { inherit pkgs configVars; })
+            (import ../common/ssh.nix { inherit configVars; })
           ];
         };
       };
