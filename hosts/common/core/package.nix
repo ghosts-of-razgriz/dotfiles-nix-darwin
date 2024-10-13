@@ -17,8 +17,6 @@
     tmux
     tree-sitter
 
-    wezterm
-
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
   ];
 }

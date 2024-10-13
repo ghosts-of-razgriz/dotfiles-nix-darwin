@@ -1,7 +1,6 @@
 { ... }:
 {
   programs.wezterm = {
-    enable = true;
     extraConfig = ''
       local a = wezterm.action
 
