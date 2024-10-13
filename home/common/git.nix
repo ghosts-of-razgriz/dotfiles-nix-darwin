@@ -43,11 +43,18 @@
       pull = {
         rebase = true;
       };
-    };
-    signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRg9FKa03UuS/SPokIVQdfA7GMlHyjvTQRf6oPzAegY";
-      signByDefault = true;
-      gpgPath = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+	  gpg = {
+        format = "ssh";
+	  };
+	  "gpg \"ssh\"" = {
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+	  };
+      commit = {
+	    gpgsign = true;
+	  };
+	  user = {
+       signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRg9FKa03UuS/SPokIVQdfA7GMlHyjvTQRf6oPzAegY";
+	  };
     };
   };
 }
