@@ -16,6 +16,7 @@
     starship
     tmux
     tree-sitter
+	pam-reattach
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
   ];
