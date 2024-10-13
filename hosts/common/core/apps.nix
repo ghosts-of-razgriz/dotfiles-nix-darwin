@@ -16,10 +16,10 @@ let
   };
 in
 {
-  programs._1password.enable = true;
-  programs._1password.package = nonfree-unstable._1password;
-  programs._1password-gui-beta.enable = true;
-  programs._1password-gui-beta.package = nonfree-unstable._1password-gui;
+  # programs._1password.enable = true;
+  # programs._1password.package = nonfree-unstable._1password;
+  # programs._1password-gui-beta.enable = true;
+  # programs._1password-gui-beta.package = nonfree-unstable._1password-gui;
 
   environment.systemPackages = with pkgs.brewCasks; [
     amethyst
@@ -39,6 +39,7 @@ in
     casks = [
       # "alfred"
       "dash@6"
+      "1password@nightly"
     ];
 
     masApps = {
