@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     nixVersions.nix_2_19
@@ -18,5 +18,7 @@
     tree-sitter
 
     wezterm
+
+    inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
   ];
 }
