@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs.brewCasks; [
-    clop
-    permute
     archiver
+    clop
+	linear-linear
+    permute
   ];
 
   homebrew = {

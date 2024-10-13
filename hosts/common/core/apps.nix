@@ -24,6 +24,7 @@ in
   environment.systemPackages = with pkgs.brewCasks; [
     amethyst
     expressions
+	homerow
     jordanbaird-ice
     maccy
     morgen
