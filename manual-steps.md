@@ -51,8 +51,11 @@ Touch ID & Password > Apple Watch
 ## Fonts
 
 - operator mono
-  - `git clone git@github.com:ghosts-of-razgriz/font-operator-mono.git ~/code/font-operator-mono`
-  - `open ~/code/font-operator-mono/nerd-operator/*`
+
+```sh
+git clone git@github.com:ghosts-of-razgriz/font-operator-mono.git ~/code/font-operator-mono
+- open ~/code/font-operator-mono/nerd-operator/*
+```
 
 ## Apps
 
