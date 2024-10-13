@@ -41,8 +41,9 @@ in
       "dash@6"
     ];
 
-    # masApps = {
-    #   Amphetamine = 937984704;
-    # };
+    masApps = {
+      Lungo = 1263070803;
+      "World Clock Pro — Convert Time" = 858446756;
+    };
   };
 }
