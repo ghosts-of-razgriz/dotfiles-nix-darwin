@@ -10,7 +10,7 @@ init host: brew-install
 rebuild-pre:
 	git add -N .
 
-rebuild: rebuild-pre
+rebuild:
 	darwin-rebuild switch --flake .
 
 repl:
