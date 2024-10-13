@@ -37,7 +37,7 @@ in
     enable = true;
 
     casks = [
-      "alfred"
+      # "alfred"
       "dash@6"
     ];
 
