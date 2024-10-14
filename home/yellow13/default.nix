@@ -35,6 +35,7 @@ in
                 "home/common/fish.nix"
                 "home/common/git.nix"
                 "home/yellow13/git.nix"
+                "home/common/mise.nix"
                 "home/common/neovim.nix"
                 "home/common/raycast.nix"
                 "home/common/ripgrep.nix"
