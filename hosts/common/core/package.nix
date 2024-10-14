@@ -9,6 +9,7 @@
     eza
     fd
     fzf
+    gh
     jq
     libyaml
     mise
@@ -16,11 +17,12 @@
     starship
     tmux
     tree-sitter
-	pam-reattach
+    pam-reattach
 
-	nixfmt-rfc-style
-	nil
+    nixfmt-rfc-style
+    nil
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+    inputs.nix-inspect.packages.${pkgs.system}.default
   ];
 }

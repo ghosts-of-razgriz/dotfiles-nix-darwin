@@ -21,6 +21,8 @@
     };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    nix-inspect.url = "github:bluskript/nix-inspect";
   };
 
   outputs =
