@@ -13,5 +13,8 @@ rebuild-pre:
 rebuild:
 	darwin-rebuild switch --flake .
 
+update input:
+	nix flake lock --update-input {{input}}
+
 repl:
 	nix develop --extra-experimental-features 'nix-command flakes'
