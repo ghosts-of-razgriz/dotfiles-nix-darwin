@@ -1,15 +1,18 @@
 { pkgs, ... }:
 {
+
   environment.systemPackages = with pkgs.brewCasks; [
     archiver
     clop
-	linear-linear
+    linear-linear
     permute
   ];
 
   homebrew = {
     casks = [
-	  "arc"
-	];
+      "arc"
+      "firefox@nightly"
+      "nordvpn"
+    ];
   };
 }
