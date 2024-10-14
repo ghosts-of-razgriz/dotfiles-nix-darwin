@@ -376,16 +376,15 @@
         "parts": "parts_2"
       },
       "locked": {
-        "lastModified": 1728878098,
-        "narHash": "sha256-4LiPEd3TPEODFnvom/grUTr93Xr/nAopXl6yU7N9ZSA=",
-        "owner": "laughingman-hass",
+        "lastModified": 1717293583,
+        "narHash": "sha256-Upz+fnWJjzt5WokjO/iaiPbqiwSrqpWjrpcFOqQ4p0E=",
+        "owner": "bluskript",
         "repo": "nix-inspect",
-        "rev": "cc17babbc76cf9e6ecf3e380a0513538069ff07d",
+        "rev": "c55921e1d1cf980ff6351273fde6cedd5d8fa320",
         "type": "github"
       },
       "original": {
-        "owner": "laughingman-hass",
-        "ref": "nix-darwin",
+        "owner": "bluskript",
         "repo": "nix-inspect",
         "type": "github"
       }

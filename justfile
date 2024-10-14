@@ -13,6 +13,9 @@ rebuild-pre:
 rebuild:
 	darwin-rebuild switch --flake .
 
+trace:
+	darwin-rebuild switch --flake . --show-trace
+
 update input:
 	nix flake lock --update-input {{input}}
 
