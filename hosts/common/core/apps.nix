@@ -24,7 +24,7 @@ in
   environment.systemPackages = with pkgs.brewCasks; [
     amethyst
     expressions
-	homerow
+    homerow
     jordanbaird-ice
     maccy
     morgen
@@ -32,6 +32,7 @@ in
     rapidapi
     raycast
     vscodium
+    xmind
   ];
 
   homebrew = {
@@ -41,12 +42,7 @@ in
       # "alfred"
       "dash@6"
       "1password@nightly"
-	  "wezterm"
+      "wezterm"
     ];
-
-    masApps = {
-      Lungo = 1263070803;
-      "World Clock Pro — Convert Time" = 858446756;
-    };
   };
 }
