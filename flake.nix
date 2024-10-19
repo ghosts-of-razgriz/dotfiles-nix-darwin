@@ -42,11 +42,12 @@
       ];
       configVars = import ./vars { inherit inputs lib; };
       configLib = import ./lib { inherit nixpkgs; };
-      specialArgs = {
+      hostArgs = configVars: {
         inherit
           inputs
           outputs
           configLib
+          configVars
           home-manager
           brew-nix
           nixpkgs
@@ -67,21 +68,27 @@
 
       darwinConfigurations = {
         yellow4 = lib.darwinSystem {
-          specialArgs = specialArgs // {
-            configVars = configVars.yellow4;
-          };
+          specialArgs = hostArgs configVars.yellow4;
           modules = [
-            brew-nix.darwinModules.default
-            ./hosts/yellow4
-            ./home/yellow4
-
             ./overlays
+            brew-nix.darwinModules.default
+
+            ./hosts/yellow4
+            ./home/yellow4/general.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.yellow4;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.yellow4.username} = import ./home/yellow4;
+              };
+            }
           ];
         };
+
         yellow13 = lib.darwinSystem {
-          specialArgs = specialArgs // {
-            configVars = configVars.yellow13;
-          };
+          specialArgs = hostArgs configVars.yellow13;
           modules = [
             brew-nix.darwinModules.default
             ./hosts/yellow13
