@@ -74,7 +74,7 @@
             brew-nix.darwinModules.default
 
             ./hosts/yellow4
-            ./home/yellow4/general.nix
+            ./home/common/general.nix
             home-manager.darwinModules.home-manager
             {
               home-manager = {
@@ -90,11 +90,20 @@
         yellow13 = lib.darwinSystem {
           specialArgs = hostArgs configVars.yellow13;
           modules = [
-            brew-nix.darwinModules.default
-            ./hosts/yellow13
-            ./home/yellow13
-
             ./overlays
+            brew-nix.darwinModules.default
+
+            ./hosts/yellow13
+            ./home/common/general.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.yellow13;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.yellow13.username} = import ./home/yellow13;
+              };
+            }
           ];
         };
       };
