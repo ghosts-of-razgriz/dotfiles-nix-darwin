@@ -19,9 +19,6 @@
     tree-sitter
     pam-reattach
 
-    nixfmt-rfc-style
-    nil
-
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
   ];
