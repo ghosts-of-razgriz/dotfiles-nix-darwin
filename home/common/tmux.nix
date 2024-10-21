@@ -8,6 +8,7 @@
     historyLimit = 1000000;
     mouse = false;
     terminal = "xterm-256color";
+    keyMode = "vi";
     plugins = with pkgs; [
       { plugin = tmuxPlugins.open; }
       {
