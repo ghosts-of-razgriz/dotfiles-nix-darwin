@@ -3,8 +3,8 @@
   imports = nixpkgs.lib.flatten [
     (map configLib.relativeToRoot [
       "home/common"
-      "home/yellow4/fish.nix"
-      "home/yellow4/git.nix"
+      "home/pixy/fish.nix"
+      "home/pixy/git.nix"
     ])
   ];
 }

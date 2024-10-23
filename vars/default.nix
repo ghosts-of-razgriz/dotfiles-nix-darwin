@@ -14,4 +14,18 @@
     username = "hass";
     hostname = "yellow13";
   };
+  pixy = {
+    theme = "Dark";
+    dockAutohide = false;
+    dockOrientation = "bottom";
+    username = "admin";
+    hostname = "pixy";
+  };
+  cipher = {
+    theme = "Dark";
+    dockAutohide = true;
+    dockOrientation = "right";
+    username = "hass";
+    hostname = "cipher";
+  };
 }

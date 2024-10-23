@@ -106,6 +106,24 @@
             }
           ];
         };
+
+        pixy = lib.darwinSystem {
+          specialArgs = hostArgs configVars.pixy;
+          modules = [
+            ./overlays
+            brew-nix.darwinModules.default
+
+            ./hosts/pixy
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.pixy;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.pixy.username} = import ./home/pixy;
+              };
+            }
+          ];
+        };
       };
     };
 }
