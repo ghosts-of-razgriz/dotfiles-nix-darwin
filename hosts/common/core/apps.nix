@@ -28,7 +28,6 @@ in
     jordanbaird-ice
     maccy
     morgen
-    numi
     rapidapi
     raycast
     vscodium
@@ -41,6 +40,7 @@ in
     casks = [
       # "alfred"
       "dash@6"
+      "docker"
       "1password@nightly"
       "wezterm"
     ];
