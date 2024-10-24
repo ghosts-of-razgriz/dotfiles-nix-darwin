@@ -9,6 +9,7 @@
   imports = nixpkgs.lib.flatten [
     (map configLib.relativeToRoot [
       "hosts/common/core"
+      "hosts/pixy/packages.nix"
       "hosts/pixy/apps.nix"
     ])
   ];
