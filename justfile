@@ -4,7 +4,8 @@ default:
 brew-install:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-init host: brew-install
+init host:
+	@if [ ! -d "/opt/homebrew" ]; then just brew-install; fi
 	nix run --extra-experimental-features 'nix-command flakes' nix-darwin -- switch --flake .#{{host}}
 
 pre:
