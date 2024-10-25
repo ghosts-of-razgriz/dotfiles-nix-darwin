@@ -115,15 +115,15 @@
 
             ./hosts/pixy
             ./home/common/general.nix
-            # home-manager.darwinModules.home-manager
-            # {
-            #   home-manager = {
-            #     extraSpecialArgs = hostArgs configVars.pixy;
-            #     useGlobalPkgs = true;
-            #     useUserPackages = false;
-            #     users.${configVars.pixy.username} = import ./home/pixy;
-            #   };
-            # }
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.pixy;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.pixy.username} = import ./home/pixy;
+              };
+            }
           ];
         };
 
@@ -135,15 +135,15 @@
 
             ./hosts/cipher
             ./home/common/general.nix
-            # home-manager.darwinModules.home-manager
-            # {
-            #   home-manager = {
-            #     extraSpecialArgs = hostArgs configVars.cipher;
-            #     useGlobalPkgs = true;
-            #     useUserPackages = false;
-            #     users.${configVars.cipher.username} = import ./home/cipher;
-            #   };
-            # }
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.cipher;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.cipher.username} = import ./home/cipher;
+              };
+            }
           ];
         };
 
