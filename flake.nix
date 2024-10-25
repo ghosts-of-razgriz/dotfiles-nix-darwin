@@ -106,6 +106,47 @@
             }
           ];
         };
+
+        pixy = lib.darwinSystem {
+          specialArgs = hostArgs configVars.pixy;
+          modules = [
+            ./overlays
+            brew-nix.darwinModules.default
+
+            ./hosts/pixy
+            ./home/common/general.nix
+            # home-manager.darwinModules.home-manager
+            # {
+            #   home-manager = {
+            #     extraSpecialArgs = hostArgs configVars.pixy;
+            #     useGlobalPkgs = true;
+            #     useUserPackages = false;
+            #     users.${configVars.pixy.username} = import ./home/pixy;
+            #   };
+            # }
+          ];
+        };
+
+        cipher = lib.darwinSystem {
+          specialArgs = hostArgs configVars.cipher;
+          modules = [
+            ./overlays
+            brew-nix.darwinModules.default
+
+            ./hosts/cipher
+            ./home/common/general.nix
+            # home-manager.darwinModules.home-manager
+            # {
+            #   home-manager = {
+            #     extraSpecialArgs = hostArgs configVars.cipher;
+            #     useGlobalPkgs = true;
+            #     useUserPackages = false;
+            #     users.${configVars.cipher.username} = import ./home/cipher;
+            #   };
+            # }
+          ];
+        };
+
       };
     };
 }
