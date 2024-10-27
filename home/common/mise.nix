@@ -6,9 +6,13 @@
     globalConfig = {
       tools = {
         usage = "latest";
-        rust = "latest";
-        python = "latest";
+
         deno = "latest";
+        node = "latest";
+        python = "latest";
+        ruby = "latest";
+        rust = "latest";
+        typst = "latest";
       };
     };
   };

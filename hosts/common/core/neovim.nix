@@ -25,5 +25,9 @@
     # python
     pylyzer
     ruff
+
+    # typst
+    typst-lsp
+    typstyle
   ];
 }
