@@ -28,7 +28,9 @@ in
       eval (/opt/homebrew/bin/brew shellenv)
 
       # shell prompt
-      starship init fish | source
+      if type -q starship
+        starship init fish | source
+      end
 
       # programming languages
       ## Golang
