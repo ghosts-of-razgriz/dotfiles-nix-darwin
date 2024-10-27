@@ -6,6 +6,7 @@
     clop
     linear-linear
     permute
+    onlyoffice
   ];
 
   homebrew = {
