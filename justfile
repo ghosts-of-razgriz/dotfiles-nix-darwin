@@ -33,17 +33,25 @@ init-post:
 pre:
 	git add -N .
 
-dev: pre
-	darwin-rebuild switch --flake .
-
 rebuild:
 	darwin-rebuild switch --flake .
+
+dev: pre rebuild
 
 trace:
 	darwin-rebuild switch --flake . --show-trace
 
+ls-input:
+	nix flake metadata --json | jq '.locks.nodes.root'
+
 update input:
 	nix flake lock --update-input {{input}}
+
+ls:
+	darwin-rebuild --list-generations
+
+del:
+	sudo nix-collect-garbage -d --delete-older-than 5d
 
 repl:
 	nix develop --extra-experimental-features 'nix-command flakes'
