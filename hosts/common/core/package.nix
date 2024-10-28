@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    nixVersions.nix_2_19
+    nix
     git
     just
 
