@@ -23,7 +23,7 @@
   brew-nix.enable = true;
 
   imports = [
-    ./package.nix
+    ./packages.nix
     ./general.nix
     ./dock.nix
     ./finder.nix
