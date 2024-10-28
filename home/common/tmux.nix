@@ -38,6 +38,7 @@
     extraConfig = ''
       set-option -ga terminal-overrides ",xterm-256color:Tc"
       set-option -g prefix M-s
+      set-option -g default-shell $SHELL
 
       set-option -g renumber-windows on
       set-option -g status-position top
