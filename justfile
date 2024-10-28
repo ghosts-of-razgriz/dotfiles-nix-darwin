@@ -1,6 +1,3 @@
-codeDir := "$HOME/code"
-dotDir := "$codeDir/dotfiles"
-
 default:
 	@just --list
 
@@ -9,18 +6,18 @@ install-brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 install-fonts:
-	if [ ! -d $codeDir/font-operator-mono ]; then \
-		git clone git@github.com:ghosts-of-razgriz/font-operator-mono.git $codeDir/font-operator-mono; \
+	if [ ! -d $HOME/code/font-operator-mono ]; then \
+		git clone git@github.com:ghosts-of-razgriz/font-operator-mono.git $HOME/code/font-operator-mono; \
 	fi
-	open $codeDir/font-operator-mono/nerd-operator/*
+	open $HOME/code/font-operator-mono/nerd-operator/*
 
 dotfiles-neovim:
 	if [ ! -d $HOME/code/dotfiles/nvim ]; then \
-		git clone git@github.com:ghosts-of-razgriz/dotfiles-nvim.git $dotDir/nvim; \
+		git clone git@github.com:ghosts-of-razgriz/dotfiles-nvim.git $HOME/code/dotfiles/nvim; \
 	fi;
 
 dotfiles-nix:
-	git clone git@github.com:ghosts-of-razgriz/dotfiles-nix-darwin.git $dotDir/nix-darwin
+	git clone git@github.com:ghosts-of-razgriz/dotfiles-nix-darwin.git $HOME/code/dotfiles/nix-darwin
 
 init host:
 	@if [ ! -d "/opt/homebrew" ]; then just install-brew; fi
