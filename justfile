@@ -25,6 +25,7 @@ init host:
 
 init-post:
 	chsh -s $(which -a fish | grep current-system)
+	sudo fdesetup enable –user $(whoami)
 
 [private]
 pre:
