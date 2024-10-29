@@ -17,6 +17,9 @@
     };
 
     "com.apple.Accessibility" = {
+      AccessibilityEnabled = true;
+      ApplicationAccessibilityEnabled = true;
+      SpeakThisEnabled = true;
       SpokenContentDefaultVoiceSelectionsByLanguage = [
         "en"
         {
@@ -25,6 +28,16 @@
           voiceId = "com.apple.ttsbundle.gryphon-neural_Nora_en-US_premium";
         }
       ];
+      "com.apple.speech.synthesis.general.prefs" = {
+        SpokenUIUseSpeakingHotKeyFlag = 1;
+      };
+
+      "com.apple.universalaccess" = {
+        speakSelectionEnabled = true;
+        spokenContentPreferredVoiceForLanguage = {
+          en = "com.apple.ttsbundle.gryphon-neural_Nora_en-US_premium";
+        };
+      };
     };
   };
 
