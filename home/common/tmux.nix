@@ -9,6 +9,7 @@
     mouse = false;
     terminal = "xterm-256color";
     keyMode = "vi";
+    sensibleOnTop = false;
     plugins = with pkgs; [
       { plugin = tmuxPlugins.open; }
       {
