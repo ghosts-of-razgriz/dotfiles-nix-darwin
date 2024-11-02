@@ -1,7 +1,16 @@
-{ config, pkgs, ... }:
+{
+  config,
+  configVars,
+  pkgs,
+  ...
+}:
 {
   nixpkgs.hostPlatform = "aarch64-darwin";
   nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.trusted-users = [
+    "root"
+    configVars.username
+  ];
   services.nix-daemon.enable = true;
 
   programs.fish.enable = true;

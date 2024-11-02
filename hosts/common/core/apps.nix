@@ -39,7 +39,6 @@ in
     enable = true;
 
     casks = [
-      # "alfred"
       "dash@6"
       "1password@nightly"
       "wezterm"
