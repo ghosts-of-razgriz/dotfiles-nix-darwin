@@ -2,7 +2,7 @@
 {
   programs.mise = {
     enable = true;
-    enableFishIntegration = true;
+    enableFishIntegration = false;
     globalConfig = {
       tools = {
         usage = "latest";

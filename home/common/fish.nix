@@ -37,6 +37,11 @@ in
         fish_add_path /run/current-system/sw/bin
       end
 
+      # mise
+      if type -q mise
+        mise activate fish | source
+      end
+
       # direnv
       if type -q direnv
         direnv hook fish | source
