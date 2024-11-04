@@ -7,8 +7,6 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    devenv
-    direnv
     tart
     tinymist
   ];

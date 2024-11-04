@@ -6,6 +6,8 @@
     just
 
     bat
+    devenv
+    direnv
     eza
     fd
     fzf
