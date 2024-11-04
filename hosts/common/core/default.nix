@@ -23,7 +23,6 @@
       zsh
       fish
     ];
-    loginShell = pkgs.fish;
   };
 
   system.configurationRevision = config.rev or config.dirtyRev or null;
