@@ -8,6 +8,8 @@
       ".config/nvim/tmp"
       ".ssh/known_hosts"
       ".DS_Store"
+      ".devenv"
+      ".direnv"
     ];
     aliases = {
       sla = "log --oneline --decorate --graph --all";
@@ -43,18 +45,18 @@
       pull = {
         rebase = true;
       };
-	  gpg = {
+      gpg = {
         format = "ssh";
-	  };
-	  "gpg \"ssh\"" = {
+      };
+      "gpg \"ssh\"" = {
         program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-	  };
+      };
       commit = {
-	    gpgsign = true;
-	  };
-	  user = {
-       signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRg9FKa03UuS/SPokIVQdfA7GMlHyjvTQRf6oPzAegY";
-	  };
+        gpgsign = true;
+      };
+      user = {
+        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBRg9FKa03UuS/SPokIVQdfA7GMlHyjvTQRf6oPzAegY";
+      };
     };
   };
 }
