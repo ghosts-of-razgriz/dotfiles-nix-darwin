@@ -32,6 +32,11 @@ in
         starship init fish | source
       end
 
+      # nix store path
+      if test -d /run/current-system/sw/bin
+        fish_add_path /run/current-system/sw/bin
+      end
+
       # direnv
       if type -q direnv
         direnv hook fish | source
