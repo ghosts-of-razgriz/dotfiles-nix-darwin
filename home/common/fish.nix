@@ -32,6 +32,11 @@ in
         starship init fish | source
       end
 
+      # direnv
+      if type -q direnv
+        direnv hook fish | source
+      end
+
       # programming languages
       ## Golang
       set --export GO111MODULE on
