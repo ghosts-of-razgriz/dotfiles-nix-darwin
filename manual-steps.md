@@ -65,6 +65,15 @@
 > Developer > CLI
 >     󰱒 Integrate with 1Password CLI
 
+### just commands
+
+```
+just init-post
+just install-fonts
+just dotfiles-nix
+just dotfiles-neovim
+```
+
 ### Amethyst
 
 > 󰱒 Start at login
