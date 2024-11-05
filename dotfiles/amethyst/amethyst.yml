@@ -119,6 +119,7 @@ floating:
   - "com.1password.1password"
   - "org.coscreen.CoScreen"
   - "net.xmind.vana.app"
+  - "com.superultra.Homerow"
 
 mouse-swaps-windows: true
 mouse-resizes-windows: true
