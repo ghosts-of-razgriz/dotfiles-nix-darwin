@@ -24,6 +24,7 @@
       "home/common/starship.nix"
       "home/common/tmux.nix"
       "home/common/wezterm.nix"
+      "home/common/zellij.nix"
     ])
   ];
 }

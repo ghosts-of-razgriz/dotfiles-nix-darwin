@@ -28,6 +28,7 @@
   homebrew = {
     brews = [
       "libyaml"
+      "zellij"
     ];
   };
 }
