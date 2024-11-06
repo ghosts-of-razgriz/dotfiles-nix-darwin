@@ -1,6 +1,7 @@
 function fish_user_key_bindings
     fish_vi_key_bindings
-    # edit buffer in vim
+
+    # c-space edit buffer in nvim
     bind -M insert -k nul edit_command_buffer
 
     # jk for esc
@@ -11,4 +12,7 @@ function fish_user_key_bindings
 
     # ctrl-p for previous
     bind -M insert \cp up-or-search
+
+    bind -M insert \ez zell
+    bind -M insert \cz dzell
 end

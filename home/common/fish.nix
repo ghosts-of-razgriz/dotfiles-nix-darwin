@@ -82,6 +82,10 @@ in
     source = ../../dotfiles/fish/conf.d/fzf_tmux.fish;
   };
 
+  xdg.configFile."fish/conf.d/fzf_zellij.fish" = {
+    source = ../../dotfiles/fish/conf.d/fzf_zellij.fish;
+  };
+
   xdg.configFile."fish/conf.d/keybinding.fish" = {
     source = ../../dotfiles/fish/conf.d/keybinding.fish;
   };
