@@ -21,11 +21,13 @@
     tree-sitter
     pam-reattach
 
-    libyaml.dev
-    openssl.dev
-    zlib
-
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
   ];
+
+  homebrew = {
+    brews = [
+      "libyaml"
+    ];
+  };
 }
