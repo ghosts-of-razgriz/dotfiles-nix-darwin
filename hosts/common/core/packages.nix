@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     nix
+    nix-index
     git
     just
 
@@ -13,13 +14,16 @@
     fzf
     gh
     jq
-    libyaml
     mise
     ripgrep
     starship
     tmux
     tree-sitter
     pam-reattach
+
+    libyaml.dev
+    openssl.dev
+    zlib
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
