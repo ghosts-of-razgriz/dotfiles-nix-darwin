@@ -3,10 +3,10 @@
 
   environment.systemPackages = with pkgs.brewCasks; [
     archiver
-    clop
     linear-linear
     permute
     onlyoffice
+    slack
   ];
 
   homebrew = {
