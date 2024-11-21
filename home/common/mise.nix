@@ -8,6 +8,7 @@
         usage = "latest";
 
         deno = "latest";
+        go = "latest";
         node = "latest";
         python = "latest";
         ruby = "latest";
