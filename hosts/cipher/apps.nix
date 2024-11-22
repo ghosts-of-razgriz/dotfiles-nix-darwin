@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs.brewCasks; [
-    datagrip
-  ];
+  homebrew = {
+    casks = [
+      "aws-vpn-client"
+      "datagrip"
+    ];
+  };
 }

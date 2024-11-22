@@ -39,10 +39,10 @@ in
     enable = true;
 
     casks = [
-      "dash@6"
-      "docker"
       "1password@nightly"
       "1password-cli"
+      "dash@6"
+      "docker"
       "wezterm"
     ];
   };
