@@ -33,6 +33,7 @@ in
     raycast
     vscodium
     xmind
+    ghostty
   ];
 
   homebrew = {

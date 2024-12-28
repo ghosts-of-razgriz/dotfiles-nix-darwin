@@ -1,5 +1,6 @@
 {
   nixpkgs,
+  config,
   configLib,
   configVars,
   ...
@@ -13,18 +14,37 @@
 
   imports = nixpkgs.lib.flatten [
     (map configLib.relativeToRoot [
-      "home/common/amethyst.nix"
       "home/common/fish.nix"
       "home/common/git.nix"
       "home/common/mise.nix"
-      "home/common/neovim.nix"
-      "home/common/raycast.nix"
       "home/common/ripgrep.nix"
       "home/common/ssh.nix"
       "home/common/starship.nix"
       "home/common/tmux.nix"
-      "home/common/wezterm.nix"
-      "home/common/zellij.nix"
     ])
   ];
+
+  xdg.configFile."amethyst/amethyst.yml" = {
+    source = ../../dotfiles/amethyst/amethyst.yml;
+  };
+
+  xdg.configFile."ghostty/config" = {
+    source = ../../dotfiles/ghostty/config;
+  };
+
+  xdg.configFile."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/nvim";
+  };
+
+  xdg.configFile."raycast/latest.rayconfig" = {
+    source = ../../dotfiles/raycast/latest.rayconfig;
+  };
+
+  xdg.configFile."wezterm/wezterm.lua" = {
+    source = ../../dotfiles/wezterm/wezterm.lua;
+  };
+
+  xdg.configFile."zellij" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij";
+  };
 }

@@ -1,0 +1,33 @@
+confirm-close-surface = false
+
+font-family = Nerd Operator Medium
+font-size = 20
+
+keybind = alt+0=text:º
+keybind = alt+1=text:¡
+keybind = alt+2=text:€
+keybind = alt+3=text:#
+keybind = alt+4=text:¢
+keybind = alt+5=text:∞
+keybind = alt+6=text:§
+keybind = alt+7=text:¶
+keybind = alt+8=text:•
+keybind = alt+9=text:ª
+keybind = alt+r=reload_config
+
+macos-option-as-alt = true
+macos-titlebar-style = hidden
+
+shell-integration = fish
+shell-integration-features = cursor,sudo,title
+
+theme = catppuccin-frappe
+
+window-decoration = true
+window-inherit-font-size = false
+window-padding-x = 25
+window-padding-y = 25
+
+
+
+config-file = local.config

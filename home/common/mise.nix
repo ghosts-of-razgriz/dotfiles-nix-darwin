@@ -10,6 +10,7 @@
         deno = "latest";
         go = "latest";
         node = "latest";
+        pnpm = "latest";
         python = "latest";
         ruby = "latest";
         rust = "latest";

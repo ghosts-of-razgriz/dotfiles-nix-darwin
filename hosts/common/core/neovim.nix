@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  nixpkgs.config.allowBroken = true;
+
   # lsp and formatters
   environment.systemPackages = with pkgs; [
     # c
@@ -13,6 +15,11 @@
     # go
     gopls
     gotools
+
+    # html css javascript
+    emmet-language-server
+    tailwindcss-language-server
+    typescript-language-server
 
     # lua
     lua-language-server
