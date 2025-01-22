@@ -44,7 +44,6 @@ in
       "1password-cli"
       "dash@6"
       "docker"
-      "wezterm"
     ];
   };
 }

@@ -40,10 +40,6 @@
     source = ../../dotfiles/raycast/latest.rayconfig;
   };
 
-  xdg.configFile."wezterm/wezterm.lua" = {
-    source = ../../dotfiles/wezterm/wezterm.lua;
-  };
-
   xdg.configFile."zellij" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij";
   };
