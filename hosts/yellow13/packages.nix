@@ -8,7 +8,8 @@
 
   environment.systemPackages = with pkgs; [
     rsync
-    tart
     tinymist
+
+    tart
   ];
 }
