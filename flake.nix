@@ -22,8 +22,6 @@
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
-    ghostty.url = "github:ghostty-org/ghostty";
-
     nix-inspect.url = "github:bluskript/nix-inspect";
   };
 
@@ -34,7 +32,6 @@
       nix-darwin,
       home-manager,
       brew-nix,
-      ghostty,
       ...
     }@inputs:
     let

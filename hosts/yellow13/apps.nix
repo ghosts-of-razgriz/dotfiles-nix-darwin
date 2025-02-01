@@ -15,10 +15,13 @@
       "adobe-acrobat-pro"
       "arc"
       "datagrip"
+      "clion"
       "elmedia-player"
       "firefox@nightly"
       "ledger-live"
       "nordvpn"
+      "kaleidoscope@3"
+      "zen-browser"
     ];
   };
 }
