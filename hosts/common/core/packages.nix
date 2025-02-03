@@ -1,5 +1,16 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
+{
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "tart"
+    ];
+
   environment.systemPackages = with pkgs; [
     nix
     nix-index
@@ -23,6 +34,8 @@
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
+
+    tart
   ];
 
   homebrew = {
