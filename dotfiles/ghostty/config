@@ -14,6 +14,7 @@ keybind = alt+7=text:¶
 keybind = alt+8=text:•
 keybind = alt+9=text:ª
 keybind = alt+r=reload_config
+keybind = global:alt+space=toggle_quick_terminal
 
 macos-option-as-alt = true
 macos-titlebar-style = hidden
