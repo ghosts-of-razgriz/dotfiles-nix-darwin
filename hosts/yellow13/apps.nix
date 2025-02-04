@@ -16,6 +16,7 @@
       "arc"
       "datagrip"
       "clion"
+      "rubymine"
       "elmedia-player"
       "firefox@nightly"
       "ledger-live"
