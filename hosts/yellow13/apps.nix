@@ -18,11 +18,10 @@
       "clion"
       "rubymine"
       "elmedia-player"
-      "firefox@nightly"
       "ledger-live"
       "nordvpn"
       "kaleidoscope@3"
-      "zen-browser"
+      "zen-browser@twilight"
     ];
   };
 }
