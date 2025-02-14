@@ -4,6 +4,7 @@
     archiver
     linear-linear
     permute
+    notion
     notion-calendar
     onlyoffice
     slack
