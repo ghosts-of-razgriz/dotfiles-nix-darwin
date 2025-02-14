@@ -4,6 +4,7 @@
     archiver
     linear-linear
     permute
+    morgen
     onlyoffice
     slack
     signal

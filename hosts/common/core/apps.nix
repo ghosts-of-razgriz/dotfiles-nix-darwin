@@ -27,7 +27,6 @@ in
     homerow
     jordanbaird-ice
     maccy
-    morgen
     numi
     rapidapi
     raycast
