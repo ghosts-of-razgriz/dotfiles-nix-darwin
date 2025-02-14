@@ -22,7 +22,7 @@
       "ledger-live"
       "nordvpn"
       "kaleidoscope@3"
-      "zen-browser@twilight"
+      "zen-browser"
     ];
   };
 }
