@@ -4,7 +4,7 @@
     archiver
     linear-linear
     permute
-    morgen
+    notion-calendar
     onlyoffice
     slack
     signal
