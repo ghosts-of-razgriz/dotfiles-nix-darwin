@@ -112,14 +112,12 @@ relaunch-amethyst:
   key: r
 
 floating:
-  - "com.todesktop.210203cqcj00tw1"
-  - "com.loom.desktop"
-  - "com.kapeli.dash-setapp"
   - "com.apple.systempreferences"
   - "com.1password.1password"
-  - "org.coscreen.CoScreen"
-  - "net.xmind.vana.app"
   - "com.superultra.Homerow"
+  - "com.cron.electron"
+  - "net.xmind.vana.app"
+  - "com.kapeli.dash-setapp"
 
 mouse-swaps-windows: true
 mouse-resizes-windows: true
