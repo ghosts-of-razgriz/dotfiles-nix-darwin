@@ -15,7 +15,6 @@
       "hosts/common/core"
       "hosts/cipher/packages.nix"
       "hosts/cipher/apps.nix"
-      "hosts/cipher/mas-apps.nix"
     ])
   ];
 }

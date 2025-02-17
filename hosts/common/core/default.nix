@@ -36,6 +36,7 @@
     ./dock.nix
     ./finder.nix
     ./apps.nix
+    ./mas-apps.nix
     ./neovim.nix
   ];
 }
