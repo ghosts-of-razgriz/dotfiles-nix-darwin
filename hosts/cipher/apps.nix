@@ -8,6 +8,7 @@
     casks = [
       "aws-vpn-client"
       "datagrip"
+      "parallels"
     ];
   };
 }
