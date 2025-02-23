@@ -31,6 +31,7 @@
     tmux
     tree-sitter
     pam-reattach
+    process-compose
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
