@@ -36,5 +36,8 @@
     # typst
     typst-lsp
     typstyle
+
+    # zig
+    zls
   ];
 }
