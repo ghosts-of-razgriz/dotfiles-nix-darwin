@@ -45,6 +45,9 @@ ls-input:
 update input:
 	nix flake lock --update-input {{input}}
 
+update-all:
+	nix flake update
+
 ls:
 	darwin-rebuild --list-generations
 
