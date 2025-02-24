@@ -11,7 +11,6 @@
     "root"
     configVars.username
   ];
-  services.nix-daemon.enable = true;
 
   programs.fish.enable = true;
   programs.zsh.enable = true;

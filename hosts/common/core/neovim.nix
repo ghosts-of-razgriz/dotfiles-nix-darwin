@@ -34,7 +34,7 @@
     ruff
 
     # typst
-    typst-lsp
+    tinymist
     typstyle
 
     # zig

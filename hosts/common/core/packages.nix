@@ -33,6 +33,9 @@
     pam-reattach
     process-compose
 
+    lua51Packages.lua
+    lua51Packages.luarocks
+
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.nix-inspect.packages.${pkgs.system}.default
 
