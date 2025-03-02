@@ -66,3 +66,7 @@ Rebuild flake
 ```sh
 just rebuild
 ```
+
+## Repo Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/707fc6a11fa82b219d06f99faca0fbb72edb93bd.svg "Repobeats analytics image")
