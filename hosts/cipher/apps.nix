@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs.brewCasks; [
-    notion-calendar
   ];
 
   homebrew = {
@@ -9,6 +8,7 @@
       "aws-vpn-client"
       "datagrip"
       "parallels"
+      "notion-calendar"
     ];
   };
 }
