@@ -30,6 +30,7 @@
     starship
     tmux
     tree-sitter
+    tree
     pam-reattach
     process-compose
 
