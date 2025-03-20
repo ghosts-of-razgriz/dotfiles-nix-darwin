@@ -29,6 +29,11 @@ window-inherit-font-size = false
 window-padding-x = 25
 window-padding-y = 25
 
+cursor-style-blink = true
 
+background-opacity = 0.9
+background-blur = true
+
+theme = tokyonight_moon
 
 config-file = local.config
