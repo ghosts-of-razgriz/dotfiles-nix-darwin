@@ -1,12 +1,17 @@
 { pkgs, ... }:
 {
   nixpkgs.config.allowBroken = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   # lsp and formatters
   environment.systemPackages = with pkgs; [
     # c
     ccls
     clang-tools
+
+    # c#
+    csharp-ls
+    csharpier
 
     # nix
     nil
