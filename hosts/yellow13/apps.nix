@@ -21,6 +21,7 @@
       "rubymine"
       "elmedia-player"
       "ledger-live"
+      "logitech-g-hub"
       "nordvpn"
       "kaleidoscope@3"
       "zen-browser"
