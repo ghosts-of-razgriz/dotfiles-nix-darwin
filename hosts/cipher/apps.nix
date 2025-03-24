@@ -7,7 +7,6 @@
     casks = [
       "aws-vpn-client"
       "datagrip"
-      "parallels"
       "notion-calendar"
     ];
   };
