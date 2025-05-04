@@ -1,1 +1,0 @@
-../yellow13/fish.nix
