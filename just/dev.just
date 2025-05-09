@@ -1,14 +1,5 @@
 import 'commands.just'
 
-dev_sshpass := 'sshpass -p admin'
-
-dev_run := dev_sshpass + " " + ssh_run + " -l admin $(tart ip nix-darwin)"
-
-get_disk_part := 'diskutil list | grep "Apple_APFS Container" | awk "{print \$NF}"'
-
-get_disk := get_disk_part + ' | sed "s/s[0-9]*\$//"'
-
-
 list:
 	@just --list dev
 
