@@ -13,4 +13,4 @@ init host:
 	@just run_on {{host}} '{{cd_dotfiles_nix}} {{nix_cmd}} {{flake_bootstrap}} .#{{host}}'
 
 debug:
-	@just run_on 'yellow4' '{{cd_dotfiles_nix}} {{nix_cmd}} develop --extra-experimental-features "nix-command flakes"'
+	@just run_on 'yellow4' 'hostname'

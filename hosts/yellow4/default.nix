@@ -1,9 +1,9 @@
 { nixpkgs, configLib, ... }:
 {
   networking = {
-    computerName = "yellow4";
-    hostName = "yellow4";
-    localHostName = "yellow4";
+    computerName = "Yellow4";
+    hostName = "Yellow4";
+    localHostName = "Yellow4";
   };
 
   imports = nixpkgs.lib.flatten [

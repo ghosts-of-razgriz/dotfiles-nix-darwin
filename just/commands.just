@@ -50,5 +50,7 @@ flake_bootstrap := 'run --extra-experimental-features "nix-command flakes" nix-d
 
 run_on host cmd='':
 	@if [ "{{host}}" = "yellow4" ]; then \
+		{{ssh_run}} yellow4.razgriz.wtf '{{cmd}}'; \
+	elif [ "{{host}}" = "dev" ]; then \
 		{{dev_run}} '{{cmd}}'; \
 	fi

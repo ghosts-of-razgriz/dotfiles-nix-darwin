@@ -2,9 +2,9 @@
 {
   yellow4 = {
     theme = "Dark";
-    dockAutohide = false;
+    dockAutohide = true;
     dockOrientation = "bottom";
-    username = "admin";
-    hostname = "yellow4";
+    username = "hass";
+    hostname = "Yellow4";
   };
 }
