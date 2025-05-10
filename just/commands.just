@@ -42,6 +42,10 @@ else \
 fi
 '''
 
+cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
+
+nix_cmd := '/nix/var/nix/profiles/default/bin/nix'
+
 run_on host cmd='':
 	@if [ "{{host}}" = "yellow4" ]; then \
 		{{dev_run}} '{{cmd}}'; \

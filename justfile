@@ -12,4 +12,4 @@ init host:
 	@just run_on {{host}} '{{clone_dotfiles_nix}}'
 
 debug:
-	@just run_on 'yellow4' '{{clone_dotfiles_nix}}'
+	@just run_on 'yellow4' '{{cd_dotfiles_nix}} {{nix_cmd}} develop --extra-experimental-features "nix-command flakes"'
