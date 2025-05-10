@@ -34,6 +34,14 @@ else \
 fi
 '''
 
+clone_dotfiles_nix := '''
+if [ -e ~/code/dotfiles/nix-darwin ] || [ -L ~/code/dotfiles/nix-darwin ]; then \
+	echo "[INFO]: nix dotfiles already exist"; \
+else \
+	git clone git@github.com:ghosts-of-razgriz/dotfiles-nix-darwin.git ~/code/dotfiles/nix-darwin; \
+fi
+'''
+
 run_on host cmd='':
 	@if [ "{{host}}" = "yellow4" ]; then \
 		{{dev_run}} '{{cmd}}'; \

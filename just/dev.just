@@ -10,6 +10,8 @@ setup:
 	@just dev::wait_until_ready
 	{{dev_run}} 'echo y | diskutil repairDisk $({{get_disk}})'
 	{{dev_run}} 'diskutil apfs resizeContainer $({{get_disk_part}}) 0'
+	{{dev_run}} 'mkdir -p ~/code/dotfiles'
+	{{dev_run}} 'ln -sf "/Volumes/My Shared Files/nix-darwin" ~/code/dotfiles/nix-darwin'
 
 debug:
 	{{dev_run}} 'echo $(pwd)'
