@@ -18,5 +18,8 @@ rebuild:
 rebuild-remote host:
 	@just run_on {{host}} '{{cd_dotfiles_nix}} {{darwin_rebuild}}'
 
+remote-repl host:
+	@just run_on {{host}} '{{cd_dotfiles_nix}} nix develop --extra-experimental-features "nix-command flakes"'
+
 ssh host:
 	@just run_on {{host}}
