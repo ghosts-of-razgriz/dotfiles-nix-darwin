@@ -4,6 +4,9 @@
 
     nix-darwin.url = "github:lnl7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -11,6 +14,7 @@
       self,
       nixpkgs,
       nix-darwin,
+      home-manager,
       ...
     }@inputs:
     let
@@ -27,6 +31,7 @@
           outputs
           configLib
           configVars
+          home-manager
           nixpkgs
           ;
       };
@@ -45,6 +50,16 @@
           specialArgs = hostArgs configVars.yellow4;
           modules = [
             ./hosts/yellow4
+            ./home/home-manager.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.yellow4;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.yellow4.username} = import ./home/yellow4;
+              };
+            }
           ];
         };
       };

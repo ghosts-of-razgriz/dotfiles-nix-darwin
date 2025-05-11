@@ -11,6 +11,7 @@ init host:
 	@just run_on {{host}} '{{enable_filevault}}'
 	@just run_on {{host}} '{{clone_dotfiles_nix}}'
 	@just run_on {{host}} '{{cd_dotfiles_nix}} {{nix_cmd}} {{flake_bootstrap}} .#{{host}}'
+	@just run_on {{host}} '{{switch_shell}}'
 
 rebuild:
 	{{darwin_rebuild}}
@@ -23,3 +24,7 @@ remote-repl host:
 
 ssh host:
 	@just run_on {{host}}
+
+debug host cmd='':
+	@just run_on {{host}} '{{cmd}}'
+	

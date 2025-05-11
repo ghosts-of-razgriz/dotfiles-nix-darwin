@@ -42,6 +42,14 @@ else \
 fi
 '''
 
+switch_shell := '''
+if [ "$SHELL" = "$(which -a fish | grep current-system)" ]; then \
+	echo "[INFO]: default shell already set"; \
+else \
+	chsh -s $(which -a fish | grep current-system); \
+fi
+'''
+
 cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
 
 nix_cmd := '/nix/var/nix/profiles/default/bin/nix'
