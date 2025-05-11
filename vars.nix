@@ -5,6 +5,6 @@
     dockAutohide = true;
     dockOrientation = "bottom";
     username = "hass";
-    hostname = "Yellow4";
+    hostname = "yellow4";
   };
 }
