@@ -38,7 +38,7 @@ clone_dotfiles_nix := '''
 if [ -e ~/code/dotfiles/nix-darwin ] || [ -L ~/code/dotfiles/nix-darwin ]; then \
 	echo "[INFO]: nix dotfiles already exist"; \
 else \
-	git clone git@github.com:ghosts-of-razgriz/dotfiles-nix-darwin.git ~/code/dotfiles/nix-darwin; \
+	git clone https://github.com/ghosts-of-razgriz/dotfiles-nix-darwin.git --branch v2.2 ~/code/dotfiles/nix-darwin; \
 fi
 '''
 
@@ -47,6 +47,8 @@ cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
 nix_cmd := '/nix/var/nix/profiles/default/bin/nix'
 
 flake_bootstrap := 'run --extra-experimental-features "nix-command flakes" nix-darwin -- switch --flake'
+
+darwin_rebuild := 'darwin-rebuild switch --flake .'
 
 run_on host cmd='':
 	@if [ "{{host}}" = "yellow4" ]; then \
