@@ -28,6 +28,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/ghostty/config";
     };
 
+    xdg.configFile."mise/config.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/mise/config.toml";
+    };
+
     xdg.configFile."nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/nvim";
     };
