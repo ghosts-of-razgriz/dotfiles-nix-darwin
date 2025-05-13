@@ -1,5 +1,7 @@
 {
   pkgs,
+  lib,
+  config,
   configVars,
   ...
 }:
@@ -25,7 +27,9 @@ in
       fish_config theme choose 'Catppuccin Mocha'
 
       # brew
-      eval (/opt/homebrew/bin/brew shellenv)
+      if test -d /opt/homebrew
+        eval (/opt/homebrew/bin/brew shellenv)
+      end
 
       # shell prompt
       if type -q starship
@@ -67,6 +71,18 @@ in
         src = pkgs.fishPlugins.colored-man-pages.src;
       }
     ];
+  };
+
+  xdg.configFile."fish/conf.d/keybinding.fish" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/conf.d/keybinding.fish";
+  };
+
+  xdg.configFile."fish/conf.d/fzf.fish" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/conf.d/fzf.fish";
+  };
+
+  xdg.configFile."fish/conf.d/${configVars.hostname}.fish" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/${configVars.hostname}.fish";
   };
 
   xdg.configFile."fish/themes" = {
