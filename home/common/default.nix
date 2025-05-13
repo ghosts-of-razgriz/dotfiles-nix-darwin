@@ -50,6 +50,7 @@
   };
 
   imports = [
+    ./direnv.nix
     ./fish.nix
     ./ssh.nix
     ./git.nix
