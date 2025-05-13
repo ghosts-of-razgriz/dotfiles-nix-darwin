@@ -25,6 +25,8 @@ remote-repl host:
 ssh host:
 	@just run_on {{host}}
 
-debug host cmd='':
+remote-debug host cmd='':
 	@just run_on {{host}} '{{cmd}}'
 	
+debug:
+	echo debugging
