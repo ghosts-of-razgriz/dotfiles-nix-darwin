@@ -31,5 +31,6 @@
     ./dock.nix
     ./finder.nix
     ./apps.nix
+    ./mas.nix
   ];
 }

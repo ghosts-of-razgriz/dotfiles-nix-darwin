@@ -26,5 +26,6 @@
     tree
     pam-reattach
     process-compose
+    zellij
   ];
 }
