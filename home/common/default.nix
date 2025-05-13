@@ -49,5 +49,7 @@
     ./fish.nix
     ./ssh.nix
     ./git.nix
+    ./ripgrep.nix
+    ./starship.nix
   ];
 }
