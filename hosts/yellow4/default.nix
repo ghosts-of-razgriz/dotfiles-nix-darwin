@@ -8,5 +8,6 @@
 
   imports = [
     ../common
+    ./apps.nix
   ];
 }
