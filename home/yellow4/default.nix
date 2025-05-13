@@ -4,9 +4,9 @@
   ...
 }:
 {
-  imports = nixpkgs.lib.flatten [
-    (map configLib.relativeToRoot [
-      "home/common"
-    ])
+
+  imports = [
+    ../common
+    ./git.nix
   ];
 }
