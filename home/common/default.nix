@@ -19,9 +19,34 @@
     home.stateVersion = "24.11";
 
     programs.home-manager.enable = true;
+
+    xdg.configFile."amethyst/amethyst.yml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/amethyst/amethyst.yml";
+    };
+
+    xdg.configFile."ghostty/config" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/ghostty/config";
+    };
+
+    xdg.configFile."nvim" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/nvim";
+    };
+
+    xdg.configFile."raycast/latest.rayconfig" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/raycast/latest.rayconfig";
+    };
+
+    xdg.configFile."zellij/config.kdl" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij/config.kdl";
+    };
+    xdg.configFile."zellij/layouts" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij/layouts";
+      recursive = true;
+    };
   };
 
   imports = [
     ./fish.nix
+    ./ssh.nix
   ];
 }
