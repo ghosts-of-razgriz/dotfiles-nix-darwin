@@ -1,7 +1,6 @@
 {
   nixpkgs,
   config,
-  configLib,
   configVars,
   lib,
   ...

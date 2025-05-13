@@ -1,8 +1,4 @@
-{
-  nixpkgs,
-  configLib,
-  ...
-}:
+{ ... }:
 {
 
   imports = [

@@ -24,12 +24,10 @@
         "aarch64-darwin"
       ];
       configVars = import ./vars.nix { inherit inputs lib; };
-      configLib = import ./lib { inherit nixpkgs; };
       hostArgs = configVars: {
         inherit
           inputs
           outputs
-          configLib
           configVars
           home-manager
           nixpkgs
