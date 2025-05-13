@@ -48,5 +48,6 @@
   imports = [
     ./fish.nix
     ./ssh.nix
+    ./git.nix
   ];
 }
