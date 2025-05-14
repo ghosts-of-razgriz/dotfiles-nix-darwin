@@ -60,6 +60,23 @@
             }
           ];
         };
+
+        yellow13 = lib.darwinSystem {
+          specialArgs = hostArgs configVars.yellow13;
+          modules = [
+            ./hosts/yellow13
+            ./home/home-manager.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.yellow13;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.yellow13.username} = import ./home/yellow13;
+              };
+            }
+          ];
+        };
       };
     };
 }
