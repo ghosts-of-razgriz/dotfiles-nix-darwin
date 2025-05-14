@@ -15,4 +15,12 @@
     username = "hass";
     hostname = "yellow13";
   };
+
+  cipher = {
+    theme = "Dark";
+    dockAutohide = true;
+    dockOrientation = "right";
+    username = "hass";
+    hostname = "cipher";
+  };
 }

@@ -5,5 +5,7 @@
     "homerow"
     "jordanbaird-ice"
     "docker"
+    "notion-calendar"
+    "datagrip"
   ];
 }

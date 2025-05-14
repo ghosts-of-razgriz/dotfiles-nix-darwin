@@ -72,6 +72,8 @@ run_on host cmd='':
 		{{ssh_run}} yellow4.razgriz.wtf '{{cmd}}'; \
 	elif [ "{{host}}" = "yellow13" ]; then \
 		{{ssh_run}} yellow13.razgriz.wtf '{{cmd}}'; \
+	elif [ "{{host}}" = "cipher" ]; then \
+		{{ssh_run}} cipher.razgriz.wtf '{{cmd}}'; \
 	elif [ "{{host}}" = "dev" ]; then \
 		{{dev_run}} '{{cmd}}'; \
 	fi

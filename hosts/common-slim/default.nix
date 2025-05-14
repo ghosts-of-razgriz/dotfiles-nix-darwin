@@ -22,6 +22,12 @@
     bash
   ];
 
+  networking = {
+    computerName = "${configVars.hostname}";
+    hostName = "${configVars.hostname}";
+    localHostName = "${configVars.hostname}";
+  };
+
   system.configurationRevision = config.rev or config.dirtyRev or null;
   system.stateVersion = 6;
 

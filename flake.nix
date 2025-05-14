@@ -79,6 +79,23 @@
             }
           ];
         };
+
+        cipher = lib.darwinSystem {
+          specialArgs = hostArgs configVars.cipher;
+          modules = [
+            ./hosts/cipher
+            ./home/home-manager.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.cipher;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.cipher.username} = import ./home/cipher;
+              };
+            }
+          ];
+        };
       };
     };
 }

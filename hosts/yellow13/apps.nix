@@ -10,7 +10,6 @@
       "linear-linear"
       "permute"
       "notion"
-      "notion-calendar"
       "slack"
       "signal"
       "ledger-live"
