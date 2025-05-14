@@ -40,10 +40,10 @@
     };
 
     xdg.configFile."zellij/config.kdl" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij/config.kdl";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/zellij/config.kdl";
     };
     xdg.configFile."zellij/layouts" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/zellij/layouts";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/zellij/layouts";
       recursive = true;
     };
   };
