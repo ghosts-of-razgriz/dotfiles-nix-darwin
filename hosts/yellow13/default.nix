@@ -7,7 +7,7 @@
   };
 
   imports = [
-    ../common
+    ../common-slim
     ./apps.nix
   ];
 }
