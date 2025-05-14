@@ -75,3 +75,16 @@ run_on host cmd='':
 	elif [ "{{host}}" = "dev" ]; then \
 		{{dev_run}} '{{cmd}}'; \
 	fi
+
+install-fonts:
+	if [ ! -d ~/code/font-operator-mono ]; then \
+		git clone git@github.com:ghosts-of-razgriz/font-operator-mono.git $HOME/code/font-operator-mono; \
+	fi
+	open ~/code/font-operator-mono/nerd-operator/*
+
+dotfiles-nix:
+	cd ~/code/dotfiles/nix-darwin; \
+	git remote set-url origin git@github.com:ghosts-of-razgriz/dotfiles-nix-darwin.git
+
+dotfiles-neovim:
+	echo 'dotfiles-neovim: NOT YET IMPLEMENTED'

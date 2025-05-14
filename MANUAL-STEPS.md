@@ -77,3 +77,31 @@ Developer
   CLI
     󰱒 Integrate with 1Password CLI
 ```
+
+## Just commands
+```
+just install-fonts
+just dotfiles-nix
+just dotfiles-neovim
+```
+
+## Amethyst
+```
+󰱒 Start at login
+```
+
+## Homerow
+
+```
+Settings 
+  General
+     License
+    
+  Clicking
+    󰌌 Shortcut: Shift + Ctrl + Cmd + Space
+    󰌌 Search Shortcut: Shift + Ctrl + Cmd + Enter
+    󰱒 Chain clicks
+    
+  Scrolling
+    󰌌 Shortcut: Shift + Ctrl + Cmd + J
+```
