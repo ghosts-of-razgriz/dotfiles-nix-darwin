@@ -27,5 +27,9 @@
     pam-reattach
     process-compose
     zellij
+
+    inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+    lua51Packages.lua
+    lua51Packages.luarocks
   ];
 }
