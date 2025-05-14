@@ -3,7 +3,8 @@
   homebrew = {
     casks = [
       "arc"
-      "zen-browser"
+      "rubymine"
+      "zen"
     ];
   };
 }
