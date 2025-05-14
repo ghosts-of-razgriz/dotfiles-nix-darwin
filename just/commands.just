@@ -13,6 +13,7 @@ ssh_run := 'ssh -t -o StrictHostKeyChecking=no'
 install_nix := '''
 if [ ! -d /nix ]; then \
 	sh <(curl -L https://releases.nixos.org/nix/nix-2.28.0/install) --daemon --yes; \
+	touch /tmp/restart_required; \
 else \
 	echo "[INFO]: nix already installed"; \
 fi
@@ -50,6 +51,14 @@ else \
 fi
 '''
 
+check_run_dir := '''
+if [ -f /tmp/restart_required ]; then \
+	echo "[INFO] RESTART REQUIRED"; \
+	rm /tmp/restart_required; \
+	read; \
+fi
+'''
+
 cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
 
 nix_cmd := '/nix/var/nix/profiles/default/bin/nix'
@@ -61,6 +70,8 @@ darwin_rebuild := 'darwin-rebuild switch --flake .'
 run_on host cmd='':
 	@if [ "{{host}}" = "yellow4" ]; then \
 		{{ssh_run}} yellow4.razgriz.wtf '{{cmd}}'; \
+	elif [ "{{host}}" = "yellow13" ]; then \
+		{{ssh_run}} yellow13.razgriz.wtf '{{cmd}}'; \
 	elif [ "{{host}}" = "dev" ]; then \
 		{{dev_run}} '{{cmd}}'; \
 	fi
