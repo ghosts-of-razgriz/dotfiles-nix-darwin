@@ -4,5 +4,6 @@
     ../common-slim
     ../common-dev
     ./apps.nix
+    ./packages.nix
   ];
 }

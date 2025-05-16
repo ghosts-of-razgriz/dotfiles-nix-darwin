@@ -1,8 +1,8 @@
 function fish_user_key_bindings
     fish_vi_key_bindings
 
-    # c-space edit buffer in nvim
-    bind -M insert -k nul edit_command_buffer
+    # alt+tab edit buffer in nvim
+	bind -M insert \e\t edit_command_buffer
 
     # jk for esc
     bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"

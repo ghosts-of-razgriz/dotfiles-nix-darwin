@@ -29,12 +29,17 @@ Finder Settings
       
 Keyboard Settings
   Shortcuts
-     Spotlight
-     Spotlight file search
-    󰱒 Mission Control - Cmd-Esc
-     Application Windows
-     Move Spaces Left
-     Move Spaces Right
+    Spotlight
+       Show Spotlight search
+       Spotlight file search
+    Mission Control
+      󰱒 Mission Control - Cmd-Esc
+       Application Windows
+       Move Spaces Left
+       Move Spaces Right
+    Input Sources
+       Select previous input source
+       Select next input source
 
 Display Settings
    Resolution
