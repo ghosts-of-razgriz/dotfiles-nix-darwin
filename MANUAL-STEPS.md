@@ -26,7 +26,7 @@ Finder Settings
        recent
     Locations
       󰱒 COMPUTER
-      
+
 Keyboard Settings
   Shortcuts
     Spotlight
@@ -64,7 +64,7 @@ General
     󰌌 Show Quick Access: Ctrl + Cmd + /
     󰌌 Lock 1Password: NIL
     󰌌 Autofill: Ctrl + /
-    
+
 Security 
   Unlock
     󰱒 Apple Watch
@@ -73,7 +73,7 @@ Security
     󰱒 Use Universal Clipboard...
   Concealed Fields
     󰱒 Hold Option to toggle...
-    
+
 Developer
   SSH agent
     󰱒 Use the SSH agent
@@ -101,12 +101,12 @@ just dotfiles-neovim
 Settings 
   General
      License
-    
+
   Clicking
     󰌌 Shortcut: Shift + Ctrl + Cmd + Space
     󰌌 Search Shortcut: Shift + Ctrl + Cmd + Enter
     󰱒 Chain clicks
-    
+
   Scrolling
     󰌌 Shortcut: Shift + Ctrl + Cmd + J
 ```
