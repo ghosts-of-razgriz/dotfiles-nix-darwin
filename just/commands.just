@@ -48,8 +48,8 @@ if [ -f /tmp/restart_required ]; then \
 fi
 '''
 cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
-nix_cmd := '/nix/var/nix/profiles/default/bin/nix'
-flake_bootstrap := 'run --extra-experimental-features "nix-command flakes" nix-darwin -- switch --flake'
+nix_shell_cmd := '/nix/var/nix/profiles/default/bin/nix-shell'
+flake_bootstrap := '--run "nh darwin switch . --hostname"'
 darwin_rebuild := 'darwin-rebuild switch --flake .'
 
 run_on host cmd='':
