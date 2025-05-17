@@ -4,6 +4,12 @@ dev_run := dev_sshpass + " " + ssh_run + " -l admin $(tart ip nix-darwin)"
 get_disk_part := 'diskutil list | grep "Apple_APFS Container" | awk "{print \$NF}"'
 get_disk := get_disk_part + ' | sed "s/s[0-9]*\$//"'
 ssh_run := 'ssh -t -o StrictHostKeyChecking=no'
+deploy_ace_key := '''
+	mkdir -p ~/.ssh; \
+	echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADZtQZVMnkGQYDPdvTVfN4nBk7nKx3TIYgqnxIfaHjO" >> ~/.ssh/authorized_keys; \
+	chmod 700 ~/.ssh; \
+	chmod 600 ~/.ssh/* ;
+'''
 install_nix := '''
 if [ ! -d /nix ]; then \
 	sh <(curl -L https://releases.nixos.org/nix/nix-2.28.0/install) --daemon --yes; \
