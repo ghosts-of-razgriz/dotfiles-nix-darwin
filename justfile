@@ -9,8 +9,11 @@ init host:
     @just run_on {{ host }} '{{ install_nix }}'
     @just run_on {{ host }} '{{ install_homebrew }}'
     @just run_on {{ host }} '{{ enable_filevault }}'
+    @just run_on {{ host }} '{{ restart_machine }}'
+    @sleep 10
+    @just wait_for {{ host }}
     @just run_on {{ host }} '{{ clone_dotfiles_nix }}'
-    @just run_on {{ host }} '{{ cd_dotfiles_nix }} {{ nix_shell_cmd }} {{ flake_bootstrap }} {{ host }}'
+    @just run_on {{ host }} '{{ cd_dotfiles_nix }} {{ nix_shell_cmd }} --run "{{ flake_bootstrap }} {{ host }}"'
     @just run_on {{ host }} '{{ switch_shell }}'
 
 rebuild:
@@ -29,4 +32,4 @@ remote-debug host cmd='':
     @just run_on {{ host }} '{{ cmd }}'
 
 debug host:
-    @just run_on {{ host }} 'echo hello world'
+    just run_on {{ host }} 'echo hello from {{ host }}'

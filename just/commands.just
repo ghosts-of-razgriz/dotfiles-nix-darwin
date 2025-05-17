@@ -7,7 +7,6 @@ ssh_run := 'ssh -t -o StrictHostKeyChecking=no'
 install_nix := '''
 if [ ! -d /nix ]; then \
 	sh <(curl -L https://releases.nixos.org/nix/nix-2.28.0/install) --daemon --yes; \
-	touch /tmp/restart_required; \
 else \
 	echo "[INFO]: nix already installed"; \
 fi
@@ -40,17 +39,11 @@ else \
 	chsh -s $(which -a fish | grep current-system); \
 fi
 '''
-check_run_dir := '''
-if [ -f /tmp/restart_required ]; then \
-	echo "[INFO] RESTART REQUIRED"; \
-	rm /tmp/restart_required; \
-	read; \
-fi
-'''
 cd_dotfiles_nix := 'cd ~/code/dotfiles/nix-darwin;'
 nix_shell_cmd := '/nix/var/nix/profiles/default/bin/nix-shell'
-flake_bootstrap := '--run "nh darwin switch . --hostname"'
+flake_bootstrap := 'nh darwin switch . --hostname'
 darwin_rebuild := 'darwin-rebuild switch --flake .'
+restart_machine := 'sudo shutdown -r +2sec'
 
 run_on host cmd='':
     @if [ "{{ host }}" = "yellow4" ]; then \
@@ -75,3 +68,18 @@ dotfiles-nix:
 
 dotfiles-neovim:
     echo 'dotfiles-neovim: NOT YET IMPLEMENTED'
+
+[private]
+wait_for host:
+    #!/usr/bin/env bash
+    until just run_on {{ host }} 'exit 0' 2>/dev/null
+    do
+    	echo '{{ host }} machine not ready, sleeping for 10 seconds'
+    	sleep 10
+    done
+    until just run_on {{ host }} 'ls -l /nix/var/nix/daemon-socket/socket' > /dev/null 2>&1
+    do
+    	echo 'nix daemon not running, sleeping for 10 seconds'
+    	sleep 10
+    done
+    echo '{{ host }} machine is now ready...'
