@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
-    ../common-slim
-    ../common-dev
+    ../common/core
+    ../common/dev
     ./apps.nix
     ./packages.nix
   ];
