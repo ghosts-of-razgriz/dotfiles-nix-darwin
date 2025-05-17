@@ -23,4 +23,12 @@
     username = "hass";
     hostname = "cipher";
   };
+
+  dev = {
+    theme = "Dark";
+    dockAutohide = true;
+    dockOrientation = "bottom";
+    username = "admin";
+    hostname = "dev";
+  };
 }

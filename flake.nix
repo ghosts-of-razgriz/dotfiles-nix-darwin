@@ -96,6 +96,23 @@
             }
           ];
         };
+
+        dev = lib.darwinSystem {
+          specialArgs = hostArgs configVars.dev;
+          modules = [
+            ./hosts/dev
+            ./home/home-manager.nix
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = hostArgs configVars.dev;
+                useGlobalPkgs = true;
+                useUserPackages = false;
+                users.${configVars.dev.username} = import ./home/dev;
+              };
+            }
+          ];
+        };
       };
     };
 }
