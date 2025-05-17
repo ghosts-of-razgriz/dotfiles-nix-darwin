@@ -79,18 +79,22 @@ in
 
   xdg.configFile."fish/conf.d/keybinding.fish" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/conf.d/keybinding.fish";
+    force = true;
   };
 
   xdg.configFile."fish/conf.d/fzf.fish" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/conf.d/fzf.fish";
+    force = true;
   };
 
   xdg.configFile."fish/conf.d/${configVars.hostname}.fish" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/fish/${configVars.hostname}.fish";
+    force = true;
   };
 
   xdg.configFile."fish/themes" = {
     source = catppuccin + "/themes";
     recursive = true;
+    force = true;
   };
 }

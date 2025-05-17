@@ -12,9 +12,11 @@
 
   home.file.".ssh/${configVars.hostname}.config" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/ssh/${configVars.hostname}.config";
+    force = true;
   };
 
   home.file.".ssh/authorized_keys" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/ssh/authorized_keys";
+    force = true;
   };
 }
