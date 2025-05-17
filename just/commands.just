@@ -30,7 +30,7 @@ clone_dotfiles_nix := '''
 if [ -e ~/code/dotfiles/nix-darwin ] || [ -L ~/code/dotfiles/nix-darwin ]; then \
 	echo "[INFO]: nix dotfiles already exist"; \
 else \
-	git clone https://github.com/ghosts-of-razgriz/dotfiles-nix-darwin.git --branch v2.2 ~/code/dotfiles/nix-darwin; \
+	git clone https://github.com/ghosts-of-razgriz/dotfiles-nix-darwin.git ~/code/dotfiles/nix-darwin; \
 fi
 '''
 switch_shell := '''
@@ -75,4 +75,3 @@ dotfiles-nix:
 
 dotfiles-neovim:
     echo 'dotfiles-neovim: NOT YET IMPLEMENTED'
-
