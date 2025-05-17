@@ -18,6 +18,7 @@
       nix
       git
       just
+      nh
     ];
   };
 }

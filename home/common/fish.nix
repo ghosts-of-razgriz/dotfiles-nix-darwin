@@ -12,6 +12,8 @@ let
     rev = "cc8e4d8fffbdaab07b3979131030b234596f18da";
     sha256 = "sha256-udiU2TOh0lYL7K7ylbt+BGlSDgCjMpy75vQ98C1kFcc=";
   };
+
+  homePath = config.home.homeDirectory;
 in
 {
   programs.fish = {
@@ -20,6 +22,7 @@ in
       set -U fish_greeting
       ulimit -n unlimited
 
+      set --export NH_FLAKE ${homePath}/code/dotfiles/nix-darwin
       set --export CDPATH . $HOME $HOME/code $HOME/scratch $HOME/.config
       set --export EDITOR nvim
       set --export VISUAL nvim
@@ -57,6 +60,7 @@ in
     '';
     shellAliases = {
       ssh = "TERM=xterm-256color command ssh";
+      rebuild = "nh darwin switch";
     };
     shellAbbrs = {
       l = "eza";

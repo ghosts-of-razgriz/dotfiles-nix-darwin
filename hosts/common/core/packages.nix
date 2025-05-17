@@ -10,6 +10,7 @@
     nix-index
     git
     just
+    nh
 
     bat
     devenv
