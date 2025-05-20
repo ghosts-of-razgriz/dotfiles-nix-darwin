@@ -6,6 +6,7 @@
     dockOrientation = "bottom";
     username = "hass";
     hostname = "yellow4";
+    system = "aarch64-darwin";
   };
 
   yellow13 = {
@@ -14,6 +15,7 @@
     dockOrientation = "left";
     username = "hass";
     hostname = "yellow13";
+    system = "aarch64-darwin";
   };
 
   cipher = {
@@ -22,6 +24,7 @@
     dockOrientation = "right";
     username = "hass";
     hostname = "cipher";
+    system = "aarch64-darwin";
   };
 
   dev = {
@@ -30,5 +33,6 @@
     dockOrientation = "bottom";
     username = "admin";
     hostname = "dev";
+    system = "aarch64-darwin";
   };
 }
