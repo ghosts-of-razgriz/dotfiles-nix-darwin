@@ -1,3 +1,6 @@
 [tools]
 rust = "nightly"
 node = "24.0.2"
+
+[settings]
+idiomatic_version_file_enable_tools = []
