@@ -14,6 +14,7 @@
       "signal"
       "ledger-live"
       "nordvpn"
+      "todoist"
     ];
   };
 }
