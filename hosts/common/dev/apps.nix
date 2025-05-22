@@ -7,6 +7,6 @@
     "docker"
     "notion-calendar"
     "datagrip"
+    "rapidapi"
   ];
 }
-
