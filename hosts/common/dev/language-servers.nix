@@ -6,6 +6,5 @@
     emmet-language-server
     tailwindcss-language-server
     typescript-language-server
-    ruby-lsp
   ];
 }
