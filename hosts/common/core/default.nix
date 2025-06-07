@@ -12,6 +12,8 @@
     configVars.username
   ];
 
+  system.primaryUser = configVars.username;
+
   programs.fish.enable = true;
   programs.zsh.enable = true;
   programs.bash.enable = true;
