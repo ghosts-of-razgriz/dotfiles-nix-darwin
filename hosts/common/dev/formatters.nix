@@ -7,5 +7,6 @@
     biome
     rufo
     rubyPackages_3_4.erb-formatter
+    gotools
   ];
 }
