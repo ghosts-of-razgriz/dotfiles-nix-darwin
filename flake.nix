@@ -26,6 +26,15 @@
         "aarch64-darwin"
       ];
       configVars = import ./vars.nix { inherit inputs lib; };
+
+      # Create custom packages for each system
+      myPackages = forAllSystems (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./pkgs { inherit pkgs; }
+      );
+
       hostArgs = configVars: {
         inherit
           inputs
@@ -34,6 +43,8 @@
           home-manager
           nixpkgs
           ;
+        # Make custom packages available using the system from configVars
+        myPkgs = myPackages.${configVars.system};
       };
     in
     {
@@ -44,6 +55,9 @@
         in
         import ./shell.nix { inherit pkgs; }
       );
+
+      # Expose custom packages
+      packages = myPackages;
 
       darwinConfigurations = {
         yellow4 = lib.darwinSystem {

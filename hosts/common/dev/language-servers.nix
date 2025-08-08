@@ -1,11 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, myPkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     gopls
     lua-language-server
+    myPkgs.emmylua-ls
     nil
-    emmet-language-server
-    tailwindcss-language-server
-    typescript-language-server
   ];
 }
