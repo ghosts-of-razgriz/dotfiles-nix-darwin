@@ -6,6 +6,7 @@
       "zen"
 
       "rubymine"
+      "goland"
 
       "linear-linear"
       "permute"
@@ -15,6 +16,7 @@
       "ledger-live"
       "nordvpn"
       "todoist"
+      "garmin-express"
     ];
   };
 }
