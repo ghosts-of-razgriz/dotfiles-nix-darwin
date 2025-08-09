@@ -8,5 +8,6 @@
     "notion-calendar"
     "datagrip"
     "rapidapi"
+    "insomnia"
   ];
 }

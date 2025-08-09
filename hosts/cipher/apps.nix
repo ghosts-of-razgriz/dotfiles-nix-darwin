@@ -1,9 +1,13 @@
 { pkgs, ... }:
 {
   homebrew = {
+    brews = [
+      "helm"
+    ];
+
     casks = [
       "aws-vpn-client"
-      "rider"
+      "goland"
     ];
   };
 }
