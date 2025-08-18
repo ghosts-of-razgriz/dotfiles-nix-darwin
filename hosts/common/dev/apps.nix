@@ -4,6 +4,7 @@
     taps = [ "nikitabobko/tap" ];
     casks = [
       "aerospace"
+      "amethyst"
       "homerow"
       "jordanbaird-ice"
       "docker"
