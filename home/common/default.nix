@@ -24,6 +24,11 @@
       force = true;
     };
 
+    xdg.configFile."aerospace/aerospace.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/aerospace/aerospace.toml";
+      force = true;
+    };
+
     xdg.configFile."ghostty/config" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/ghostty/config";
       force = true;
