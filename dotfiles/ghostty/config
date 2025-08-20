@@ -1,7 +1,7 @@
 confirm-close-surface = false
 
 font-family = Nerd Operator Medium
-font-size = 20
+font-size = 15
 
 keybind = alt+0=text:º
 keybind = alt+1=text:¡
