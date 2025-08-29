@@ -40,5 +40,6 @@
     ./finder.nix
     ./apps.nix
     ./mas.nix
+    ./fonts.nix
   ];
 }
