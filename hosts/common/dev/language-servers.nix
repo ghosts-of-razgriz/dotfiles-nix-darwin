@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     gopls
     lua-language-server
-    myPkgs.emmylua-ls
+    emmylua-ls
     nil
   ];
 }
