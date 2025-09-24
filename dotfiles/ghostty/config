@@ -21,7 +21,7 @@ macos-titlebar-style = hidden
 shell-integration = fish
 shell-integration-features = cursor,sudo,title
 
-theme = catppuccin-macchiato
+theme = TokyoNight Storm
 
 window-decoration = true
 window-inherit-font-size = false
@@ -32,7 +32,5 @@ cursor-style-blink = true
 
 background-opacity = 0.9
 background-blur = true
-
-theme = tokyonight_moon
 
 config-file = local.config
