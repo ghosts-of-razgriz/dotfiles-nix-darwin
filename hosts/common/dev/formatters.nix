@@ -4,5 +4,6 @@
     stylua
     nixfmt-rfc-style
     gotools
+    typstyle
   ];
 }
