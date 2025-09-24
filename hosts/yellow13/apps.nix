@@ -17,6 +17,7 @@
       "nordvpn"
       "todoist"
       "garmin-express"
+      "sony-ps-remote-play"
     ];
   };
 }
