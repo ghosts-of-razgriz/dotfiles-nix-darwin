@@ -21,12 +21,13 @@
     gh
     jq
     mise
-    ripgrep
-    starship
-    tree-sitter
-    tree
     pam-reattach
     process-compose
+    ripgrep
+    starship
+    tree
+    tree-sitter
+    websocat
     zellij
 
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
