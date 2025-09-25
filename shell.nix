@@ -17,6 +17,7 @@
     buildInputs = with pkgs; [
       nix
       git
+      jujutsu
       just
       nh
     ];

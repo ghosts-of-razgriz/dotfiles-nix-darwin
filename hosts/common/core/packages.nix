@@ -9,6 +9,7 @@
     nix
     nix-index
     git
+    jujutsu
     just
     nh
 
