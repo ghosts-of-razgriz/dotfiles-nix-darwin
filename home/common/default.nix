@@ -58,6 +58,16 @@
       recursive = true;
       force = true;
     };
+
+    xdg.configFile."jj/config.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/jujutsu/config.toml";
+      force = true;
+    };
+
+    xdg.configFile."jj/conf.d/${configVars.hostname}.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/jujutsu/${configVars.hostname}.toml";
+      force = true;
+    };
   };
 
   imports = [
