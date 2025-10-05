@@ -1,0 +1,11 @@
+[[ssh-keys]]
+item = "phantom"
+vault = "osean"
+
+[[ssh-keys]]
+item = "Signing Key"
+vault = "Private"
+
+[[ssh-keys]]
+item = "Github"
+vault = "Private"
