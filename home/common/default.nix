@@ -19,6 +19,9 @@
 
     programs.home-manager.enable = true;
 
+    programs.fzf.enable = true;
+    programs.fzf.enableFishIntegration = true;
+
     xdg.configFile."amethyst/amethyst.yml" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.dotfilesPath}/amethyst/amethyst.yml";
       force = true;
