@@ -10,3 +10,6 @@ backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [ui]
 default-command = "log"
 pager = ":builtin"
+
+[revsets]
+log = "present(@) | ancestors(immutable_heads().., 10) | present(trunk())"
