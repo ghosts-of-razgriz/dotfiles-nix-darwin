@@ -23,7 +23,7 @@ shell-integration-features = cursor,sudo,title
 
 theme = TokyoNight Storm
 
-window-decoration = true
+window-decoration = none
 window-inherit-font-size = false
 window-padding-x = 25
 window-padding-y = 25
