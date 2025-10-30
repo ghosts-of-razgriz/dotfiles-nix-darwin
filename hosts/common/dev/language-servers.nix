@@ -6,5 +6,6 @@
     emmylua-ls
     nil
     tinymist
+    typescript-language-server
   ];
 }

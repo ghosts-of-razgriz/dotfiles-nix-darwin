@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    stylua
-    nixfmt-rfc-style
     gotools
+    nixfmt-rfc-style
+    stylua
+    superhtml
     typstyle
   ];
 }
