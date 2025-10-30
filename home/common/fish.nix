@@ -74,6 +74,10 @@ in
         name = "colored-man-pages";
         src = pkgs.fishPlugins.colored-man-pages.src;
       }
+      {
+        name = "fifc";
+        src = pkgs.fishPlugins.fifc.src;
+      }
     ];
   };
 
